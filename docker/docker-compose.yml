@@ -1,0 +1,73 @@
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    container_name: pva_project
+    restart: always
+    working_dir: /var/www
+
+    environment:
+      # --- Database ---
+      DB_HOST: db
+      DB_NAME: pva_db
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_CHARSET: utf8mb4
+
+      # --- App ---
+      APP_ENV: local
+
+      # --- Default admin ---
+      ADMIN_USERNAME: ${ADMIN_USERNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+
+    volumes:
+      # :z applies the SELinux label needed for shared bind mounts.
+      - ../src:/var/www:z
+
+    depends_on:
+      - db
+
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: pva_project-nginx
+    restart: always
+    working_dir: /var/www
+
+    ports:
+      - "8000:80"
+
+    volumes:
+      - ../src:/var/www:z
+      - ./nginx:/etc/nginx/conf.d:z
+
+    depends_on:
+      - app
+
+  db:
+    container_name: pva_project-db
+    image: mysql:8.0
+    restart: always
+
+    environment:
+      # MySQL credentials are supplied through .env.
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: pva_db
+
+    # Allows host-side database tools to connect during development.
+    ports:
+      - "3306:3306"
+
+    volumes:
+      # Named volume managed by Docker.
+      # Avoids host-uid and SELinux permission issues on native Linux.
+      - db_data:/var/lib/mysql
+
+      # Runs automatically only when the data directory is empty.
+      - ./mysql/init:/docker-entrypoint-initdb.d:z
+
+volumes:
+  db_data:

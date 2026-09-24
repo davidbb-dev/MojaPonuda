@@ -1,0 +1,15 @@
+/* Inline validation styles for the create/edit listing form */
+
+.error_message {
+    display: block;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.invalid {
+    border-color: #dc2626 !important;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+}

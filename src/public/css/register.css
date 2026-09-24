@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh - 80px);
+}
+
+.register-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 40px;
+
+    background: #fff;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.register-title {
+    text-align: center;
+    margin-bottom: 25px;
+
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.register-input {
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.register-button {
+    margin-top: 10px;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.register-button:hover {
+    background: #1d4ed8;
+}
+
+.register-button:active {
+    transform: translateY(1px);
+}
+
+.register-flash {
+    margin-top: 15px;
+    text-align: center;
+
+    color: #dc2626;
+    font-weight: 500;
+}

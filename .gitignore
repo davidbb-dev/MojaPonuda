@@ -1,0 +1,7 @@
+/docker/storage/
+
+/src/public/uploads/
+
+/src/storage/
+
+/docker/.env

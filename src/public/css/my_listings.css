@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+}
+
+.listings-control {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+    backdrop-filter: blur(8px);
+}
+
+.listings-control input,
+.listings-control select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 14px;
+    background: #fff;
+
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.listings-control input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.listings-control select {
+    cursor: pointer;
+}
+
+.listings-control input:focus,
+.listings-control select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.listing_container {
+    display: flex;
+    width: 100%;
+    min-height: 180px;
+
+    align-items: stretch;
+
+    margin: 12px 0;
+
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    transition: 0.2s ease;
+
+    cursor: pointer;
+}
+
+.listing_container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.image_wrapper,
+.info_wrapper,
+.buttons_wrapper {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image_wrapper {
+    padding: 0;
+    flex: 1;
+
+    min-width: 180px;
+    max-width: 180px;
+    overflow: hidden;
+}
+
+.img_listing {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info_wrapper {
+    justify-content: center;
+    flex: 2;
+}
+
+.h2-name {
+    margin: 0;
+    font-size: 18px;
+}
+
+.h2-description {
+    color: #555;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.current_price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.buttons_wrapper {
+    flex: 0 0 140px;
+    align-items: center;
+    gap: 10px;
+}
+
+.listing_button {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: #fff;
+
+    text-decoration: none;
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.listing_button:hover {
+    background: #1d4ed8;
+}
+
+.listing_type_label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 4px 10px;
+    margin-top: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 999px;
+
+    width: fit-content;
+    letter-spacing: 0.3px;
+}
+
+.listing_type_label.auction {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+
+.listing_type_label.fixed_price {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae5fd;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+    margin-top: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 999px;
+
+    width: fit-content;
+    letter-spacing: 0.3px;
+
+    line-height: 2;
+}
+
+.status-badge.status-active {
+    border: 1px solid #22c55e;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.status-draft {
+    border: 1px solid #f59e0b;
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge.status-paused {
+    border: 1px solid #3b82f6;
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-badge.status-sold {
+    border: 1px solid #10b981;
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-badge.status-expired {
+    border: 1px solid #ef4444;
+    background: #fee2e2;
+    color: #991b1b;
+}

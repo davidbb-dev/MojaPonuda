@@ -1,0 +1,291 @@
+.listing-card-large {
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.listing-media {
+    width: 420px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: visible;
+    background: transparent;
+}
+
+.listing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.listing-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.listing-title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.listing-price-box {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.auction-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.auction-input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.btn-primary {
+    padding: 10px;
+    border: none;
+    background: #2b6cb0;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #1f4f86;
+}
+
+.btn-secondary {
+    padding: 8px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.listing-description {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* -------------------------
+   GALLERY (MAIN + THUMBNAILS)
+------------------------- */
+
+#main-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #f0f0f0;
+}
+
+.thumb-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumb:hover {
+    border-color: #2b6cb0;
+}
+
+/* -------------------------
+   TITLE ROW + FAVORITE
+------------------------- */
+
+.title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.favorite-btn {
+    background: #f3f4f6;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.favorite-btn.is-fav {
+    background: #fee2e2;
+    border-color: #fca5a5;
+}
+
+.buy-now {
+    font-size: 16px;
+    padding: 12px 18px;
+    max-width: 220px;
+}
+
+.sold-banner {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+/* -------------------------
+   BID HISTORY
+------------------------- */
+
+.bid-history {
+    margin-top: 8px;
+    background: #f9fafb;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 360px;
+}
+
+.bid-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 4px 0;
+    font-size: 13px;
+}
+
+/* -------------------------
+   SELLER CARD
+------------------------- */
+
+.seller-card {
+    margin-top: 18px;
+    padding: 14px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.seller-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+}
+
+.seller-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e5e7eb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+/* -------------------------
+   STARS
+------------------------- */
+
+.stars {
+    color: #f59e0b;
+    font-weight: 700;
+}
+
+.stars .stars-empty {
+    color: #d1d5db;
+}
+
+.stars-count {
+    color: #6b7280;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* -------------------------
+   REVIEWS
+------------------------- */
+
+.review-form-card,
+.reviews-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.review-form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 460px;
+}
+
+.review-form-card textarea {
+    min-height: 90px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.review-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+
+.review-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-date {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .listing-card-large {
+        flex-direction: column;
+    }
+
+    .listing-media {
+        width: 100%;
+    }
+
+    #main-image {
+        height: 300px;
+    }
+}
